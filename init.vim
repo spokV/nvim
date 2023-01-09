@@ -42,6 +42,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
 
@@ -59,5 +61,9 @@ let g:neoformat_basic_format_retab = 1
 " Enable trimmming of trailing whitespace
 let g:neoformat_basic_format_trim = 1
 let g:neomake_python_enabled_makers = ['pylint']
+
+hi HighlightedyankRegion cterm=reverse gui=reverse
+
+let g:deoplete#enable_at_startup = 1
 
 colorscheme gruvbox
